@@ -54,14 +54,11 @@ Then, generate an ImageNet dataset; make the dataset used for the results above 
 export IMAGENET_DIR=/path/to/pytorch/format/imagenet/directory/
 export WRITE_DIR=/your/path/here/
 
-# Starting in the root of the Git repo:
-cd examples;
-
 # Serialize images with:
 # - 500px side length maximum
 # - 50% JPEG encoded, 90% raw pixel values
 # - quality=90 JPEGs
-./write_dataset.sh 500 0.50 90
+./write_imagenet.sh 500 0.50 90
 ```
 Then, choose a configuration from the [configuration table](#configurations). With the config file path in hand, train as follows:
 ```bash
